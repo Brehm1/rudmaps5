@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+
+
+
+.map1{
+
+  height: 90%;
+  width: 90%;  
+  
+}
+#map1{
+  height: auto;
+  width: 100%;
+  position: absolute ;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.map0{
+  height: 40%;
+  width: 40%;  
+  
+}
+#map0{
+  height: 78%;
+  width: 75.5vw;
+  background-image: url("./Assets/plan0.webp");
+  position: absolute ;
+  z-index: -5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Noder{
+  position: relative ;
+  margin-top: 0%;
+  margin-left: 0%;
+  height:auto;
+  width:100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#marker{
+  height: 1%;
+  width: 1%;
 }
 
-.App-link {
-  color: #61dafb;
-}
+#S4{position: absolute;height:1%;width:1%; margin-top:10%; margin-left: 3%;}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+#S1{position: absolute;height:1%;width:1%; margin-top:10%; margin-left: 10%;}
+
+#R1{position: absolute;height:1%;width:1%; margin-top: 10vh; margin-left: 20vw;}
+
+#R2{position: absolute;height:1%;width:1%; margin-top: 20vh; margin-left: 20vw;}
+
+#R3{position: absolute;height:1%;width:1%; margin-top: 30vh; margin-left: 20vw;}
+
+#R4{position: absolute;height:1%;width:1%; margin-top: 40vh; margin-left: 20vw;}
+
+#P1{position: absolute;height:1%;width:1%; margin-top: 47vh; margin-left: 22vw;}
+
+#P2{position: absolute;height:1%;width:1%; margin-top: 47vh; margin-left: 32vw;}
+
+#P3{position: absolute;height:1%;width:1%; margin-top: 47vh; margin-left: 40vw;}
+
+#P4{position: absolute;height:1%;width:1%; margin-top: 47vh; margin-left: 48vw;}
+
+#P5{position: absolute;height:1%;width:1%; margin-top: 47vh; margin-left: 54vw;}
+
+#M1{position: absolute;height:1%;width:1%; margin-top: 7vh; margin-left: 31vw;}
+
+#M2{position: absolute;height:1%;width:1%; margin-top: 7vh; margin-left: 42vw;}
+
+#M3{position: absolute;height:1%;width:1%; margin-top: 7vh; margin-left: 53vw;}
+
+#L1{position: absolute;height:1%;width:1%; margin-top: 17vh; margin-left: 31vw;}
+
+#L2{position: absolute;height:1%;width:1%; margin-top: 27vh; margin-left: 31vw;}
+
+#D1{position: absolute;height:1%;width:1%; margin-top: 39vh; margin-left: 33vw;}
+
+#K1{position: absolute;height:1%;width:1%; margin-top: 15vh; margin-left: 42vw;}
+
+#K2{position: absolute;height:1%;width:1%; margin-top: 25vh; margin-left: 42vw;}
+
+#F1{position: absolute;height:1%;width:1%; margin-top: 33vh; margin-left: 42vw;}
+
+#H1{position: absolute;height:1%;width:1%; margin-top: 17vh; margin-left: 53vw;}
+
+#H2{position: absolute;height:1%;width:1%; margin-top: 27vh; margin-left: 53vw;}
+
+#B1{position: absolute;height:1%;width:1%; margin-top: 39vh; margin-left: 54vw;}
+
+#S21{position: absolute;height:1%;width:1%; margin-top: 41vh; margin-left: 10vw;}
+
+#S22{position: absolute;height:1%;width:1%; margin-top: 35vh; margin-left: 6vw;}
+
+#S23{position: absolute;height:1%;width:1%; margin-top: 45vh; margin-left: 6vw;}
+
+#väg{z-index: 50; }
