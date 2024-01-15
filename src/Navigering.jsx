@@ -6,61 +6,7 @@ import plan0 from './Assets/plan0.webp';
 
 
 export default function Pathfind() {
-  let S4ref,
-    S1ref,
-    R1,
-    M1,
-    L1,
-    L2,
-    D1,
-    M2,
-    K1,
-    K2,
-    F1,
-    M3,
-    H1,
-    H2,
-    R2,
-    R3,
-    R4,
-    S21,
-    S22,
-    S23,
-    P1,
-    P2,
-    P3,
-    P4,
-    P5,
-    B1;
-  let canvas = useRef(null);
-  const noderRef = [
-    (S4ref = useRef(2)),
-    (S1ref = useRef(3)),
-    (R1 = useRef(null)),
-    (M1 = useRef(null)),
-    (L1 = useRef(null)),
-    (L2 = useRef(null)),
-    (D1 = useRef(null)),
-    (M2 = useRef(null)),
-    (K1 = useRef(null)),
-    (K2 = useRef(null)),
-    (F1 = useRef(null)),
-    (M3 = useRef(null)),
-    (H1 = useRef(null)),
-    (H2 = useRef(null)),
-    (R2 = useRef(null)),
-    (R3 = useRef(null)),
-    (R4 = useRef(null)),
-    (S21 = useRef(null)),
-    (S22 = useRef(null)),
-    (S23 = useRef(null)),
-    (P1 = useRef(null)),
-    (P2 = useRef(null)),
-    (P3 = useRef(null)),
-    (P4 = useRef(null)),
-    (P5 = useRef(null)),
-    (B1 = useRef(null)),
-  ];
+
   const ShortestDistanceNode = (distances, visited) => {
     let shortest = null;
     for (let node in distances) {
@@ -166,6 +112,61 @@ export default function Pathfind() {
       }
     }, []);
   }
+  let S4ref,
+  S1ref,
+  R1,
+  M1,
+  L1,
+  L2,
+  D1,
+  M2,
+  K1,
+  K2,
+  F1,
+  M3,
+  H1,
+  H2,
+  R2,
+  R3,
+  R4,
+  S21,
+  S22,
+  S23,
+  P1,
+  P2,
+  P3,
+  P4,
+  P5,
+  B1;
+let canvas = useRef(null);
+const noderRef = [
+  (S4ref = useRef(2)),
+  (S1ref = useRef(3)),
+  (R1 = useRef(null)),
+  (M1 = useRef(null)),
+  (L1 = useRef(null)),
+  (L2 = useRef(null)),
+  (D1 = useRef(null)),
+  (M2 = useRef(null)),
+  (K1 = useRef(null)),
+  (K2 = useRef(null)),
+  (F1 = useRef(null)),
+  (M3 = useRef(null)),
+  (H1 = useRef(null)),
+  (H2 = useRef(null)),
+  (R2 = useRef(null)),
+  (R3 = useRef(null)),
+  (R4 = useRef(null)),
+  (S21 = useRef(null)),
+  (S22 = useRef(null)),
+  (S23 = useRef(null)),
+  (P1 = useRef(null)),
+  (P2 = useRef(null)),
+  (P3 = useRef(null)),
+  (P4 = useRef(null)),
+  (P5 = useRef(null)),
+  (B1 = useRef(null)),
+];
   const graph = {
     S4: { S1: 1 },
     S1: { R1: 1, S4: 1 },
@@ -222,7 +223,7 @@ export default function Pathfind() {
     "P5",
     "B1",
   ];
-  FindShortestPath(graph, "S4", "P1");
+  FindShortestPath(graph, "S4", "S22");
   return (
     <div className="map0">
       <img id="map0" scr="./Assets/plan0.webp" alt="plan0"></img>
