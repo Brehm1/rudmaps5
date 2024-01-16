@@ -8,6 +8,10 @@
     "react-bootstrap": "^2.9.2",
     "react-dom": "^18.2.0",
     "react-router": "^6.21.2",
+<<<<<<< HEAD
+=======
+    "react-router-dom": "^6.21.2",
+>>>>>>> dd0e9b0e308c1fa59b5603a0b7e3b24cb1d9cf2c
     "react-scripts": "5.0.1",
     "sass": "^1.69.7"
   },

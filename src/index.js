@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './Navigering';
+import App from './App';
 import { createRoot } from 'react-dom/client';
 
 
