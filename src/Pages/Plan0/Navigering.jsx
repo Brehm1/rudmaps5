@@ -1,8 +1,7 @@
 /* eslint-disable */
 import React, { useRef, useEffect } from "react";
-import "./App.css";
-import marker from './Assets/marker.webp';
-import plan0 from './Assets/plan0.webp';
+import marker from '../Assets/marker.webp';
+import plan0 from '../Assets/plan0.webp';
 
 
 export default function Pathfind() {
@@ -105,9 +104,9 @@ export default function Pathfind() {
       const ctx = c.getContext("2d");
       ctx.clearRect(0, 0, 10000, 10000);
       ctx.beginPath();
-      ctx.moveTo(xValues[0], yValues[0]);
+      ctx.moveTo(xValues[0], yValues[0]-50);
       for (let j = 1; j < shortestPath.length; j++) {
-        ctx.lineTo(xValues[j], yValues[j]);
+        ctx.lineTo(xValues[j], yValues[j]-50);
         ctx.stroke();
       }
     }, []);
@@ -223,10 +222,10 @@ const noderRef = [
     "P5",
     "B1",
   ];
-  FindShortestPath(graph, "S4", "S22");
+  FindShortestPath(graph, "S4", "B1");
   return (
     <div className="map0">
-      <img id="map0" scr="./Assets/plan0.webp" alt="plan0"></img>
+      <img id="map0" scr={plan0} alt="plan0"></img>
       <img id="S4" src={marker} ref={S4ref} alt="marker"></img>
       <img id="S1" src={marker} ref={S1ref} alt="marker"></img>
       <img id="R1" src={marker} ref={R1} alt="marker"></img>
