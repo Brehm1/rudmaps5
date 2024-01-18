@@ -5,8 +5,8 @@ import plan0 from '../Assets/plan0.webp';
 
 
 export default function Pathfind() {
-  let startNode = "S4";
-  let endNode = "B1";
+  let startNode = "S4"
+  let endNode = "B1"
   const ShortestDistanceNode = (distances, visited) => {
     let shortest = null;
     for (let node in distances) {
@@ -94,7 +94,9 @@ export default function Pathfind() {
     }
     const xValues = [];
     const yValues = [];
-    console.log();
+    console.log(noderRef[1])
+    console.log(noderRef[0].current)
+    /*
     useEffect(() => {
       for (let j = 0; j < shortestPath.length; j++) {
         yValues[j] = noderRef[nodIndex[j]].current.getBoundingClientRect().top;
@@ -111,7 +113,7 @@ export default function Pathfind() {
         ctx.lineTo(xValues[j], yValues[j]-50);
         ctx.stroke();
       }
-    }, []);
+    }, []);*/
   }
   let S4ref,
   S1ref,
@@ -224,14 +226,13 @@ const noderRef = [
     "P5",
     "B1",
   ];
-  FindShortestPath(graph, startNode, endNode);
-
+FindShortestPath(graph,"S4","B1")
   return (
     <div className="map0">
-      {/* <img id="map0" scr={plan0} alt="plan0"></img> */}
-      <img id="S4" src={marker} ref={S4ref} alt="marker"></img>
-      <img id="S1" src={marker} ref={S1ref} alt="marker"></img>
-      <img id="R1" src={marker} ref={R1} alt="marker"></img>
+      <img id="map0" scr={plan0} alt="plan0"></img> 
+      <img  id="S4"  src={marker}  ref={S4ref} alt="marker"></img>
+      <img  id="S1"  src={marker}  ref={S1ref} alt="marker"></img>
+      <img  id="R1"  src={marker}  ref={R1}  alt="marker"></img>
       <img  id="R2"  src={marker}  ref={R2}  alt="marker" ></img>
       <img  id="R3"  src={marker}  ref={R3}  alt="marker"></img>
       <img  id="R4"  src={marker}  ref={R4}  alt="marker"></img>
