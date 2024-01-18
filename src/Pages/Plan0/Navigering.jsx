@@ -225,7 +225,7 @@ const noderRef = [
   FindShortestPath(graph, "S4", "B1");
   return (
     <div className="map0">
-      <img id="map0" scr={plan0} alt="plan0"></img>
+      {/* <img id="map0" scr={plan0} alt="plan0"></img> */}
       <img id="S4" src={marker} ref={S4ref} alt="marker"></img>
       <img id="S1" src={marker} ref={S1ref} alt="marker"></img>
       <img id="R1" src={marker} ref={R1} alt="marker"></img>
