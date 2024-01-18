@@ -5,7 +5,8 @@ import plan0 from '../Assets/plan0.webp';
 
 
 export default function Pathfind() {
-
+  let startNode = "S4";
+  let endNode = "B1";
   const ShortestDistanceNode = (distances, visited) => {
     let shortest = null;
     for (let node in distances) {
@@ -19,6 +20,7 @@ export default function Pathfind() {
   };
 
   function FindShortestPath(graph, startNode, endNode) {
+    
     // establish object for recording distances from the start node
     let distances = {};
     distances[endNode] = "Infinity";
@@ -222,14 +224,15 @@ const noderRef = [
     "P5",
     "B1",
   ];
-  FindShortestPath(graph, "S4", "B1");
+  FindShortestPath(graph, startNode, endNode);
+
   return (
     <div className="map0">
       {/* <img id="map0" scr={plan0} alt="plan0"></img> */}
       <img id="S4" src={marker} ref={S4ref} alt="marker"></img>
       <img id="S1" src={marker} ref={S1ref} alt="marker"></img>
       <img id="R1" src={marker} ref={R1} alt="marker"></img>
-      <img  id="R2"  src={marker}  ref={R2}  alt="marker"></img>
+      <img  id="R2"  src={marker}  ref={R2}  alt="marker" ></img>
       <img  id="R3"  src={marker}  ref={R3}  alt="marker"></img>
       <img  id="R4"  src={marker}  ref={R4}  alt="marker"></img>
       <img  id="P1"  src={marker}  ref={P1}  alt="marker"></img>

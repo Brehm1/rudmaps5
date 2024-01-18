@@ -1,0 +1,302 @@
+
+$color-1: #3498db;
+$color-2: #e74c3c;
+$color-3: #2ecc71;
+$color-4: #f39c12;
+$color-5: #9b59b6;
+$color-6: #1abc9c;
+$color-7: #e67e22;
+$color-8: #34495e;
+$color-9: #94495e;
+$color-10: #a8b534;
+$color-11: #a75454;
+.Schemat {
+    display: flex;
+    position: absolute;
+    
+    --Dagar: 6%;
+    --RastOchBlock: calc( 100% - var(--Dagar)*2.5);
+    --SchemaBredd: 100% ;
+    --sidebar: calc(var(--SchemaBredd)/15);
+    --5minuterFaktor: calc(var(--RastOchBlock)/84) ;
+    
+    height: calc(var(--RastOchBlock) + var(--Dagar));
+    
+
+    outline: 5px solid rgb(223, 173, 173);
+    
+    
+   
+    .TidHeader {
+        outline: 2px solid rgb(0, 0, 0);
+        background-color: $color-11;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        height: var(--Dagar);
+        width: 100% ;
+        
+    }
+
+    .TidBar{
+        height: calc(var(--Dagar)*1.5 + var(--RastOchBlock));
+        background-color: $color-11;
+        
+    }
+
+    .Dag{
+        outline: 2px solid rgb(0, 42, 255);
+        background-color: $color-11;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: var(--Dagar);
+        width: 100%/5;
+        
+    }
+
+    
+    
+    .Block{
+        background-color: $color-1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        
+
+        &.Block1{
+            height: calc(var(--5minuterFaktor) * 12);
+            background-color: $color-1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--SchemaBredd);
+        }
+
+        &.Block2h1{
+            height: calc(var(--5minuterFaktor) * 23);
+        }
+
+        
+    }
+    
+    .Block{
+        background-color: $color-2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+
+        
+
+        &.Block2{
+            height: calc(var(--5minuterFaktor) * 12);
+            background-color: $color-2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--SchemaBredd);        }
+
+        &.Block2h2{
+            height: calc(var(--5minuterFaktor) * 23);
+        }
+
+        
+    }
+    
+    .Block{
+        background-color: $color-3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        
+
+        &.Block3{
+            height: calc(var(--5minuterFaktor) * 12);
+            background-color: $color-3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--SchemaBredd);        }
+
+        &.Block50min3{
+            height: calc(var(--5minuterFaktor) * 10);
+        }
+
+        
+
+        
+    }
+    
+    .Block{
+        background-color: $color-4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+
+        
+
+        &.Block4{
+            height: calc(var(--5minuterFaktor) * 12);
+            background-color: $color-4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--SchemaBredd);        }
+
+        &.Block50min4{
+            height: calc(var(--5minuterFaktor) * 10);
+        }
+
+        
+    }
+    
+    .Block{
+        background-color: $color-5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+
+        
+
+        &.Block5{
+            height: calc(var(--5minuterFaktor) * 12);
+            background-color: $color-5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--SchemaBredd);        }
+
+        &.Block2h5{
+            height: calc(var(--5minuterFaktor) * 23);
+        }
+
+        
+    }
+    
+    .Block{
+        background-color: $color-6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+
+        
+
+        &.Block6{
+            height: calc(var(--5minuterFaktor) * 12);
+            background-color: $color-6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--SchemaBredd);        }
+
+        &.Block2h6{
+            height: calc(var(--5minuterFaktor) * 23);
+        }
+
+        
+    }
+        
+    
+    .Block{
+        background-color: $color-7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     
+
+        
+
+        &.Block7{
+            height: calc(var(--5minuterFaktor) * 12);
+            background-color: $color-7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--SchemaBredd);        }
+
+        &.Block2h7{
+            height: calc(var(--5minuterFaktor) * 23);
+        }
+
+        
+    }
+        
+    
+    .Block{
+        background-color: $color-8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        
+
+        &.Block8{
+            height: calc(var(--5minuterFaktor) * 12);
+            background-color: $color-8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--SchemaBredd);        }
+
+        &.Block110min8{
+            height: calc(var(--5minuterFaktor) * 22);
+        }
+
+
+
+        
+    }
+    
+    .Mentorstid{
+        background-color: $color-9;
+        height: calc(var(--5minuterFaktor) * 7);
+        width: var(--SchemaBredd);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .Resurstid{
+        background-color: $color-10;
+        height: calc(var(--5minuterFaktor) * 26);
+        width: var(--SchemaBredd);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+     
+    .Sidebar{
+        display: flex;
+        
+        .TidHeader{
+            background-color: $color-10;
+            height: var(--Dagar);
+        }
+
+
+    }
+   
+}
+
+
+
+.Rast5 { height: calc(var(--5minuterFaktor)* 1);}
+.Rast10 { height: calc(var(--5minuterFaktor) * 2);}
+.Rast15 { height: calc(var(--5minuterFaktor) * 3);}
+.Rast20 { height: calc(var(--5minuterFaktor) * 4);}
+
+.ämnebar{
+    margin-left: 40%;
+    width: 100%;
+}
