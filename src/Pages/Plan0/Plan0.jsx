@@ -3,6 +3,7 @@ import map0 from '../Assets/rudmaps_floor_0_thickLines2.webp';
 import marker from '../Assets/marker.webp';
 import './Navigering'
 import Pathfind from './Navigering';
+import './Plan0.scss';
 
 
 
