@@ -95,7 +95,7 @@ export default function Pathfind() {
     const yValues = [];
     console.log(noderRef[1])
     console.log(noderRef[0].current)
-    /*
+    
     useEffect(() => {
       for (let j = 0; j < shortestPath.length; j++) {
         yValues[j] = noderRef[nodIndex[j]].current.getBoundingClientRect().top;
@@ -112,7 +112,7 @@ export default function Pathfind() {
         ctx.lineTo(xValues[j], yValues[j]-50);
         ctx.stroke();
       }
-    }, []);*/
+    }, []);
   }
   let S4ref,
   S1ref,
