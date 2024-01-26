@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import map0 from '../Assets/rudmaps_floor_0_thickLines2.jpg';
 import marker from '../Assets/marker.webp';
 import './Plan0.scss';
@@ -14,12 +14,24 @@ import './Plan0.scss';
 
 
 
+    let startNode = "S4";
+  let endNode = "S4"
 
 
 
 const Plan0 = () => {
-  let startNode = "S4"
-  let endNode = "B1"
+  const [num, setNum] = useState(1)
+
+  function handleSubmit(e){
+    e.preventDefault();
+    setNum(num+1)
+    const form = e.target;
+    const formData = new FormData(form);
+    startNode = formData.get("start")
+    endNode = formData.get("end")
+    return(startNode,endNode);
+    
+  }
   const ShortestDistanceNode = (distances, visited) => {
     let shortest = null;
     for (let node in distances) {
@@ -100,32 +112,28 @@ const Plan0 = () => {
       for (let j = 0; j < noder.length; j++) {
         if (shortestPath[i] === noder[j]) {
           nodIndex[i] = j;
-          console.log(nodIndex[i]);
         }
       }
     }
     const xValues = [];
     const yValues = [];
-    console.log(noderRef[1])
-    console.log(noderRef[0].current)
     
     useEffect(() => {
       for (let j = 0; j < shortestPath.length; j++) {
         yValues[j] = noderRef[nodIndex[j]].current.getBoundingClientRect().top;
         xValues[j] = noderRef[nodIndex[j]].current.getBoundingClientRect().left;
-        console.log(xValues[j] + yValues[j]);
       }
 
       let c = canvas.current;
       const ctx = c.getContext("2d");
       ctx.clearRect(0, 0, 10000, 10000);
       ctx.beginPath();
-      ctx.moveTo(xValues[0], yValues[0]-50);
+      ctx.moveTo(xValues[0], yValues[0]-70);
       for (let j = 1; j < shortestPath.length; j++) {
-        ctx.lineTo(xValues[j], yValues[j]-50);
+        ctx.lineTo(xValues[j], yValues[j]-70);
         ctx.stroke();
       }
-    }, []);
+    }, [handleSubmit]);
   }
   let S4ref,
   S1ref,
@@ -193,7 +201,7 @@ const noderRef = [
     M2: { M3: 1, K1: 1, M1: 1 },
     K1: { K2: 1, M2: 1 },
     K2: { F1: 1, K1: 1 },
-    F1: { B1: 1, D1: 1, K2: 1 },
+    F1: { D1: 1, K2: 1 },
     M3: { H1: 1, M2: 1 },
     H1: { H2: 1, M3: 1 },
     H2: { B1: 1, H1: 1 },
@@ -204,11 +212,11 @@ const noderRef = [
     S22: { S21: 1 },
     S23: { S21: 1 },
     P1: { P2: 1, R4: 1 },
-    P2: { D1: 1, P3: 1, P1: 1 },
-    P3: { P4: 1, P2: 1 },
+    P2: { P3: 1, P1: 1 },
+    P3: {  D1: 1, P4: 1, P2: 1 },
     P4: { P5: 1, P3: 1 },
     P5: { B1: 1, P4: 1 },
-    B1: { H2: 1, F1: 1, P5: 1 },
+    B1: { H2: 1, P5: 1 },
   };
   const noder = [
     "S4",
@@ -238,7 +246,7 @@ const noderRef = [
     "P5",
     "B1",
   ];
-FindShortestPath(graph,"S4","B1")
+
   let id;
   let options;
   function success(pos) {
@@ -280,17 +288,21 @@ FindShortestPath(graph,"S4","B1")
   function error(err) {
     console.error(`ERROR(${err.code}): ${err.message}`);
   }
-
+  FindShortestPath(graph,startNode,endNode)
 
   return(
        
     id = navigator.geolocation.watchPosition(success,error),  
     console.log('gått förbi id'),
-        <div >
-
-            <input type="text" name="start"/>
-            <input type="text" name="end"/>
-            {/* <button onClick={pathfind(startNode,endNode)}></button> */}
+        <><div className='input'>
+          <form method='post' onSubmit={handleSubmit}>
+            <input type="text" name="start" defaultValue={"S4"}/>
+            <input type="text" name="end" defaultValue={"S4"}/>
+            <button type='submit' onClick={() => setNum(num + 1)}>Sök</button>
+          </form>
+            
+            </div>
+            <div className='map'>
             <img id="map0" src={map0} alt="map0"></img>
       <img id="S4" src={marker} ref={S4ref} alt="marker"></img>
       <img id="S1" src={marker} ref={S1ref} alt="marker"></img>
@@ -319,7 +331,7 @@ FindShortestPath(graph,"S4","B1")
       <img  id="S22"  src={marker}  ref={S22}  alt="marker"></img>
       <img  id="S23"  src={marker}  ref={S23}  alt="marker"></img>
       <canvas id="väg" width="4000" height="2000" ref={canvas}></canvas>
-        </div>
+        </div></>
 
       
        

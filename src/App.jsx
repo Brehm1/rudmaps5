@@ -10,7 +10,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Plan0 from './Pages/Plan0/Plan0';
-import Plan1 from './Pages/Plan1/Plan1';
+// import Plan1 from './Pages/Plan1/Plan1';
+import Plan1 from './test'
 import Home from './Pages/Home/Home'
 import Inloggning from './Pages/Inloggning/Inloggning'
 import Profil from './Pages/Profil/Profil';
