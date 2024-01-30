@@ -1,9 +1,12 @@
-#map1{
+#map0{
     width:100%;
     height: auto;
-}
+    z-index:-9999;
+    position: absolute;
+  }
 #väg{
     position: absolute;
+    z-index: 5;
 }
 .map{
     margin-top: 30px;
