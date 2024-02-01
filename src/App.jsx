@@ -37,14 +37,14 @@ const AppJsx =() => {
                 navbarScroll
             >
 
-                <Nav.Link href="profil">Profil</Nav.Link>
+                {/* <Nav.Link href="profil">Profil</Nav.Link> */}
                 <Nav.Link href="plan0" enabled>
                  Plan 0
                 </Nav.Link>
                 <Nav.Link href="plan1" enabled>
                  Plan 1
                 </Nav.Link>
-                <NavDropdown title="Information" id="navbardropdown">
+                {/* <NavDropdown title="Information" id="navbardropdown">
                  <NavDropdown.Item href="schema">
                   Schema
                   </NavDropdown.Item>
@@ -55,24 +55,24 @@ const AppJsx =() => {
                   <NavDropdown.Item href="inloggning">
                   Logga ut
                  </NavDropdown.Item>
-                </NavDropdown>
+                </NavDropdown> */}
 
               </Nav>
-              <Form className="d-flex">
+              {/* <Form className="d-flex">
                <Nav.Link href="inloggning" enabled>
                 Logga in
                </Nav.Link>
 
-             </Form>
+             </Form> */}
 
-              <Form className="d-flex">
+              {/* <Form className="d-flex">
                 <Form.Control
                   type="search"
                   placeholder="Sök..."
                   className="me-2"
                  aria-label="Search" />
                 <Button variant="outline-success" id="">Sök</Button>
-             </Form>
+             </Form> */}
             </Navbar.Collapse>
           </Container>
         </Navbar>  
@@ -84,10 +84,10 @@ const AppJsx =() => {
       <div>
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/profil" element={<VäljaÄmne />} />
+          {/* <Route path="/profil" element={<VäljaÄmne />} /> */}
           <Route path="/plan0" element={<Plan0 />} />
           <Route path="/plan1" element={<Plan1 />} />
-          <Route path="/inloggning" element={<Inloggning />} />
+          {/* <Route path="/inloggning" element={<Inloggning />} /> */}
         </Routes>
       </div>
       

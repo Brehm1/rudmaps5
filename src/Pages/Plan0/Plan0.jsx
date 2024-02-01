@@ -330,7 +330,7 @@ const noderRef = [
       <img  id="S21"  src={marker}  ref={S21}  alt="marker"></img>
       <img  id="S22"  src={marker}  ref={S22}  alt="marker"></img>
       <img  id="S23"  src={marker}  ref={S23}  alt="marker"></img>
-      <canvas id="väg" width="4000" height="2000" ref={canvas}></canvas>
+      <canvas id="väg" width="4000" height="2000" ref={canvas} ></canvas>
         </div></>
 
       
